@@ -1,0 +1,323 @@
+<html class="supernova"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="https://cdn.jotfor.ms/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Conductivity Calculator - By Aviral Srivastava </title>
+<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.15892" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.15892">
+<!-- for side lines of form  -->
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/themes/CSS/566a91c2977cdfcd478b4567.css?">
+
+<style type="text/css">
+    .form-label-left{
+        width:150px;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px;
+    }
+    body, html{
+        margin:0;
+        padding:0;
+        background:#fff;
+    }
+
+    .form-all{
+        margin:0px auto;
+        padding-top:20px;
+        width:590px;
+        color:#555 !important;
+        font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+        font-size:14px;
+    }
+    .form-radio-item label, .form-checkbox-item label, .form-grading-label, .form-header{
+        color: Black;
+    }
+
+</style>
+
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+.form-label.form-label-auto {
+        
+      display: block;
+      float: none;
+      text-align: left;
+      width: 100%;
+    
+      }/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Lucida Grande, sans-serif;
+    }
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-family: Lucida Grande, sans-serif;
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-family: Lucida Grande, sans-serif;
+    }
+    .form-header-group {
+      font-family: Lucida Grande, sans-serif;
+    }
+    .form-label {
+      font-family: Lucida Grande, sans-serif;
+    }
+  
+    
+  
+    .form-line {
+      margin-top: 12px 36px 12px 36px px;
+      margin-bottom: 12px 36px 12px 36px px;
+    }
+  
+    .form-all {
+      width: 590px;
+    }
+  
+    .form-label-left,
+    .form-label-right {
+      width: 150px
+    }
+  
+    .form-all {
+      font-size: 14px
+    }
+    .form-all .qq-upload-button,
+    .form-all .qq-upload-button,
+    .form-all .form-submit-button,
+    .form-all .form-submit-reset,
+    .form-all .form-submit-print {
+      font-size: 14px
+    }
+    .form-all .form-pagebreak-back-container,
+    .form-all .form-pagebreak-next-container {
+      font-size: 14px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #fff;
+      border: 1px solid transparent;
+    }
+  
+    .form-all {
+      color: #555;
+    }
+    .form-header-group .form-header {
+      color: #555;
+    }
+    .form-header-group .form-subHeader {
+      color: #555;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label {
+      color: #555;
+    }
+    .form-sub-label {
+      color: #6f6f6f;
+    }
+  
+    .supernova {
+      background-color: undefined;
+    }
+    .supernova body {
+      background: transparent;
+    }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: undefined;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    }
+  
+    .form-all {
+      background-image: none;
+    }
+  
+  .ie-8 .form-all:before { display: none; }
+  .ie-8 {
+    margin-top: auto;
+    margin-top: initial;
+  }
+  /*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+    /* Injected CSS Code */
+</style>
+
+<!-- Script for Clear Form -->
+<script>
+function refreshPage(){
+    // document.getElementById("Calci").reset();
+     document.getElementById("T1").value = "";
+     document.getElementById("T2").value = "";
+     document.getElementById("T3").value = "";
+     document.getElementById("T4").value = "";
+     document.getElementById("K").value = "";
+     document.getElementById("P").value = "";
+     document.getElementById("C").value = "";
+     document.getElementById("K_un").value = "";
+     document.getElementById("A").value = "";
+} 
+</script>
+
+</head>
+<body data-gr-c-s-loaded="true">
+<form class="jotform-form" id="Calci" action="/" method="post"  >
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li >
+        <!-- Underline below heading -->
+        <div class="form-header-group  header-large">
+          <div class="header-text httac htvam">
+            <h1>
+             Thermal Conductivity Measurement
+            </h1>
+          </div>
+        </div>
+      </li>
+      
+      <li class="form-line jf-required" data-type="control_datetime">
+        <label class="form-label form-label-left" >
+          Temperatures
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        {% if T1 %}
+        <input type="text" name="T1" id="T1" style="width: 37px;padding: 8px;margin-left: 14px;" value="{{T1}}" required > <span>&#176;</span>C </input>
+        {% else %}
+        <input type="text" name="T1" id="T1" style="width: 37px;padding: 8px;margin-left: 14px;"  required > <span>&#176;</span>C </input>
+        {% endif %}
+
+        {% if T2 %}
+        <input type="text" name="T2" id="T2" style="width: 37px;padding: 8px;margin-left: 14px;" value="{{T2}}" required > <span>&#176;</span>C </input>
+        {% else %}
+        <input type="text" name="T2" id="T2" style="width: 37px;padding: 8px;margin-left: 14px;"  required > <span>&#176;</span>C </input>
+        {% endif %}
+
+        {% if T3 %}
+        <input type="text" name="T3" id="T3" style="width: 37px;padding: 8px;margin-left: 14px;" value="{{T3}}" required > <span>&#176;</span>C </input>
+        {% else %}
+        <input type="text" name="T3" id="T3" style="width: 37px;padding: 8px;margin-left: 14px;"  required > <span>&#176;</span>C </input>
+        {% endif %}
+
+        {% if T4 %}
+        <input type="text" name="T4" id="T4" style="width: 37px;padding: 8px;margin-left: 14px;" value="{{T4}}" required > <span>&#176;</span>C </input>
+        {% else %}
+        <input type="text" name="T4" id="T4" style="width: 37px;padding: 8px;margin-left: 14px;"  required > <span>&#176;</span>C </input>
+        {% endif %}
+        
+        <br>
+         
+      </li>
+
+      <li class="form-line jf-required" data-type="control_datetime">
+        <label class="form-label form-label-left" >
+          Thermal Conductivity of Standard Specimen
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        {% if K %}
+        <input type="text" id="K" style="width: 219px;padding: 8px;margin-left: 14px;" name="K" value="{{K}}" required > W/m<span>&#176;</span>C </input>
+        <br><label style="margin-left: 100px;">K<sub>(Known)</sub></label>   
+        {% else %}
+        <input type="text" id="K" style="width: 219px;padding: 8px;margin-left: 14px;" name="K" required > W/m<span>&#176;</span>C </input>
+        <br><label style="margin-left: 100px;">K<sub>(Known)</sub></label>
+        {% endif %}
+      </li>
+
+
+      <li class="form-line jf-required" data-type="control_datetime">
+        <label class="form-label form-label-left" >
+          Density of Test Specimen
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        {% if P %}
+        <input type="text" id="P" style="width: 219px;padding: 8px;margin-left: 14px;" name="P" value="{{P}}" required > m<sup>3</sup>/kg </input>
+        <br><label style="margin-left:116px;">P</label>  
+        {% else %}
+        <input type="text" id="P" style="width: 219px;padding: 8px;margin-left: 14px;" name="P" required > m<sup>3</sup>/kg </input>
+        <br><label style="margin-left:116px;">P</label> 
+        {% endif %} 
+      </li>
+
+
+      <li class="form-line jf-required" data-type="control_datetime">
+        <label class="form-label form-label-left" >
+          Specific Heat of Test Specimen
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        {% if C %}
+        <input type="text" id="C" style="width: 219px;padding: 8px;margin-left: 14px;" name="C" value="{{C}}" required >J/kg k  </input>
+        <br><label style="margin-left: 113px;">C</label>  
+        {% else %}
+        <input type="text" id="C" style="width: 219px;padding: 8px;margin-left: 14px;" name="C" required >J/kg k  </input>
+        <br><label style="margin-left: 113px;">C</label>   
+        {% endif %} 
+      </li>
+
+
+       <li class="form-line jf-required" data-type="control_datetime">
+        <label class="form-label form-label-left" >
+          Thermal Conductivity of Test Specimen
+        </label>
+        {% if K_un %}
+        <input type="text" id="K_un" style="width: 219px;padding: 8px;margin-left: 14px;" name="K_un" value="{{K_un}}" > W/m<span>&#176;</span>C </input>
+        {% else %}
+        <input type="text" id="K_un" style="width: 219px;padding: 8px;margin-left: 14px;" name="K_un"  > W/m<span>&#176;</span>C </input>
+        {% endif %}
+        <br><label style="margin-left: 100px;">K<sub>(UnKnown)</sub></label>   
+      </li>
+
+
+       <li class="form-line jf-required" data-type="control_datetime">
+        <label class="form-label form-label-left" >
+          Thermal Diffusivity of Test Specimen
+        </label>
+        {% if A %}
+        <input type="text" id="A" style="width: 219px;padding: 8px;margin-left: 14px;" value="{{A}}" name="A"></input>
+        <br><label style="margin-left: 116px;"> A</label>   
+        {% else %}
+        <input type="text" id="A" style="width: 219px;padding: 8px;margin-left: 14px;" name="A"></input>
+        <br><label style="margin-left: 116px;"> A</label> 
+        {% endif %}
+      </li>
+
+<!--     Submit Button -->
+     <li class="form-line" data-type="control_button" >
+        <div  class="form-input-wide">
+          <div style="text-align:center" data-align="center" class="form-buttons-wrapper  ">
+
+             <button class="form-submit-button "  style="background: orange; color: white;border-radius: 8px;">Submit</button>
+
+            <button class="form-submit-button " onclick="refreshPage()" style="background: orange; color: white;border-radius: 8px;">Reset</button>
+            
+          </div>
+        </div>
+      </li>
+      </ul>
+     
+</body></html>
